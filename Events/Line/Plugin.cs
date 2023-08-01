@@ -130,12 +130,12 @@ namespace AutoEvent.Events.Line
             if (Player.List.Count(r => r.Role == RoleTypeId.ClassD) > 1)
             {
                 Extensions.Broadcast(trans.LineWinners.Replace("%name%", Name)
-                    .Replace("%alive%", Player.List.Count(x => x.Role == RoleTypeId.ClassD)), 10);
+                    .Replace("%alive%", $"{Player.List.Count(x => x.Role == RoleTypeId.ClassD)}"), 10);
             }
             else if (Player.List.Count(r => r.Role == RoleTypeId.ClassD) == 1)
             {
                 Extensions.Broadcast(trans.LineWinner.Replace("%name%", Name)
-                    .Replace("%nickname", Player.List.First(r => r.Role == RoleTypeId.ClassD), 10);
+                    .Replace("%nickname", $"{Player.List.First(r => r.Role == RoleTypeId.ClassD)}"), 10);
             }
             else
             {
